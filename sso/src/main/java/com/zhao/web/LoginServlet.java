@@ -54,6 +54,7 @@ public class LoginServlet  extends HttpServlet{
                     //添加cookie
                     CookieUtil.addLoginCookie(req,resp,user);
                 }
+
                 //跳到成功页面
                 resp.sendRedirect(req.getContextPath() + "/index.jsp");
                 return;
