@@ -1,5 +1,6 @@
 package com.zhao.web;
 
+import com.alibaba.fastjson.JSONObject;
 import com.zhao.pojo.User;
 import com.zhao.service.LoginService;
 import com.zhao.utils.CookieUtil;
@@ -15,7 +16,7 @@ import java.io.IOException;
  * @创建人 zhaohuan
  * @邮箱 1101006260@qq.com
  * @创建时间 2018-06-17 14:41
- * @描述  有相同父级域名(.com .net等顶级域名除外)情况下的单点登录
+ * @描述  有相同父级域名(.com .net等顶级域名除外)情况下的单点登录（原理是cookie共享,自动登录）
  */
 public class LoginServlet  extends HttpServlet{
     private LoginService loginService;
@@ -23,6 +24,7 @@ public class LoginServlet  extends HttpServlet{
     @Override
     public void init() throws ServletException {
         loginService = new LoginService();
+        JSONObject jsonObject = null;
     }
 
     @Override

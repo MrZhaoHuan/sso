@@ -10,8 +10,15 @@
     <groupId>com.zhao</groupId>
     <artifactId>sso-common-lib</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <relativePath>../sso-common-lib/pom.xml</relativePath>
   </parent>
+
+  <dependencies>
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>1.2.45</version>
+      </dependency>
+  </dependencies>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
